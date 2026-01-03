@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>게시판</title>
+</head>
+<body>
+
+<h2>학교 게시판</h2>
+
+<input id="name" placeholder="이름"><br><br>
+<input id="title" placeholder="제목"><br><br>
+<textarea id="text" placeholder="내용"></textarea><br><br>
+
+<button onclick="send()">보내기</button>
+
+<hr>
+<div id="list"></div>
+
+<script>
+function send() {
+  const name = document.getElementById("name").value;
+  const title = document.getElementById("title").value;
+  const text = document.getElementById("text").value;
+  const date = new Date().toLocaleString();
+
+  document.getElementById("list").innerHTML += `
+    <h3>${title}</h3>
+    <p>${text}</p>
+    <small>${name} | ${date}</small>
+    <hr>
+  `;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>학교 로그인</title>
+</head>
+<body>
+
+<h2>학교 비밀 사이트</h2>
+<p>코드를 입력하세요</p>
+
+<input type="password" id="code">
+<button onclick="login()">입장</button>
+
+<script>
+function login() {
+  if (document.getElementById("code").value === "285680") {
+    window.location.href = "board.html";
+  } else {
+    alert("코드가 틀렸어요");
+  }
+}
+</script>
+
+</body>
+</html>
