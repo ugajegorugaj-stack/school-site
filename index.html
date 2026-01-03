@@ -1,3 +1,15 @@
+<body>
+<script>
+  const password = "285680"; // ← сюда напиши свой код
+
+  const userPass = prompt("비밀번호 입력하세요");
+
+  if (userPass !== password) {
+    alert("사이트는 센터 직원만 가능");
+    document.body.innerHTML = "";
+  }
+</script>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,3 +36,4 @@ function login() {
 
 </body>
 </html>
+
