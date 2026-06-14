@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>게시판</title>
+<meta charset="UTF-8">
+<title>자유게시판</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#fff;
+    margin:30px;
+}
+
+h1{
+    color:#4a7c2f;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#ece9c9;
+    padding:10px;
+    border:1px solid #ccc;
+}
+
+td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.bottom{
+    margin-top:20px;
+    text-align:center;
+}
+
+.write{
+    float:right;
+    margin-top:10px;
+}
+</style>
 </head>
+
 <body>
 
-<h2>학교 게시판</h2>
+<h1>자유게시판</h1>
 
-<input id="name" placeholder="이름"><br><br>
-<input id="title" placeholder="제목"><br><br>
-<textarea id="text" placeholder="내용"></textarea><br><br>
+<table>
+<tr>
+<th>No</th>
+<th>제목</th>
+<th>작성자</th>
+<th>등록일</th>
+<th>조회</th>
+</tr>
 
-<button onclick="send()">보내기</button>
+<tr>
+<td>1</td>
+<td><a href="#">안녕하세요</a></td>
+<td>관리자</td>
+<td>2026-06-14</td>
+<td>1</td>
+</tr>
 
-<hr>
-<div id="list"></div>
+</table>
 
-<script>
-function send() {
-  const name = document.getElementById("name").value;
-  const title = document.getElementById("title").value;
-  const text = document.getElementById("text").value;
-  const date = new Date().toLocaleString();
+<div class="bottom">
+1 2 3 4 5
+</div>
 
-  document.getElementById("list").innerHTML += `
-    <h3>${title}</h3>
-    <p>${text}</p>
-    <small>${name} | ${date}</small>
-    <hr>
-  `;
-}
-</script>
+<div class="write">
+<button onclick="location.href='write.html'">
+글작성
+</button>
+</div>
 
 </body>
 </html>
